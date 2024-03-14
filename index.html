@@ -56,16 +56,15 @@
 
             <div class="search">
                 <i class="fa-solid fa-magnifying-glass"></i>
-                <form action="">
-                    <input type="text" placeholder="Cerca o inizia una nuova chat">
-                </form>
+                <input type="text" placeholder="Cerca o inizia una nuova chat" v-model="searchInput" @keyup="search()">
             </div>
             <!-- /.search -->
 
             <div class="contacts-list d-flex flex-column">
 
                 <div class="contacts d-flex flex-column">
-                    <div class="user-icon-column" v-for="(contact,index) in contacts" @click="changeContact(index)">
+                    <div class="user-icon-column" v-for="(contact,index) in contacts" @click="changeContact(index)"
+                        :class="contact.visible === false ? 'd-none' : 'd-flex'">
                         <img :src="contact.avatar" :alt="contact.name" class="avatar">
                         <div class="user-name">
                             <strong>{{contact.name}}</strong>

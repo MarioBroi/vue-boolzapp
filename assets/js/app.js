@@ -207,7 +207,22 @@ createApp({
                 message: 'ok',
                 status: 'received'
             })
+        },
+        search() {
+            this.contacts.forEach(contact => {
+                if (contact.name.toLowerCase().startsWith(this.searchInput.toLowerCase())) {
+                    contact.visible = true;
+                    //console.log(contact.visible);
+                    //console.log(typeof contact.visible);
+                    //console.log('esiste');
+                    //console.log(contact.name);
+                } else {
+                    contact.visible = false;
+                    //console.log(contact.visible);
+                    //console.log(typeof contact.visible);
+                    //console.log('non esiste');
+                }
+            });
         }
-
     }
 }).mount('#appMain');
