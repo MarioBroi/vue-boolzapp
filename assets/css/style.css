@@ -1,0 +1,28 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.debug * {
+    border: 1px dashed black;
+}
+
+:root {
+    --boolzapp-bg-top: rgba(0, 150, 136, 1);
+    --boolzapp-bg-bot: rgba(221, 219, 210, 1);
+    --boolzapp-light: rgba(234, 234, 234, 1);
+    --boolzapp-lighter: rgba(255, 255, 255, 1);
+    --boolzapp-notify: rgba(142, 218, 252, 1);
+    --boolzapp-user-icon: rgba(177, 177, 177, 1);
+    --boolzapp-utility-icon: rgba(107, 115, 118, 1);
+    --boolzapp-sender-msg: rgba(213, 249, 186, 1);
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    height: 100vh;
+    background-image: linear-gradient(to bottom, rgba(0, 150, 136, 1) 0px, rgba(0, 150, 136, 1) 200px, rgba(221, 219, 210, 1) 200px, rgba(221, 219, 210, 1) 100%);
+    overflow: hidden;
+    background-repeat: repeat no-repeat;
+}
