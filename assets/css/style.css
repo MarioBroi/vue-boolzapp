@@ -26,3 +26,320 @@ body {
     overflow: hidden;
     background-repeat: repeat no-repeat;
 }
+
+/* old css */
+
+#appMain {
+    margin: 1rem auto 2rem;
+    max-width: 1200px;
+    display: flex;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+
+    .left {
+        height: 100%;
+
+        &>div:not(:nth-child(4)) {
+            height: var(--bz-blocks-height);
+        }
+
+        &> :nth-child(4) {
+            height: calc(100% - (var(--bz-blocks-height) * 3));
+            overflow-y: auto;
+        }
+
+    }
+
+    .right {
+        flex-grow: 1;
+
+        >.contact-profile {
+            padding: 1rem;
+            background-color: var(--boolzapp-light);
+
+            &>.user-name {
+                flex: auto;
+                font-size: 20px;
+                padding: 0.7rem;
+            }
+
+            &>.utility-icons {
+                align-self: center;
+                color: var(--boolzapp-user-icon);
+
+                &>i {
+                    font-size: 20px;
+                    padding: 0.5rem;
+                }
+            }
+        }
+
+        >.contact-profile,
+        >.prompt {
+            display: flex;
+            align-items: center;
+            height: 70px;
+        }
+
+        >.chat {
+            height: calc(100% - 140px);
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            padding: 2rem;
+            background-image: url(../img/mine.jpg);
+
+            &>div {
+                min-height: 140px;
+            }
+
+            >.sent {
+                width: 500px;
+                display: flex;
+                align-self: flex-end;
+                padding: 0.5rem;
+                margin-bottom: 1rem;
+                border-radius: 10px;
+                background-color: var(--boolzapp-sender-msg);
+
+                & i {
+                    font-size: 15px;
+                    color: var(--boolzapp-user-icon);
+                    padding: 0;
+                }
+
+                & .right-chat {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+
+                    &>span {
+                        font-size: 10px;
+                        color: var(--boolzapp-user-icon);
+                    }
+                }
+
+            }
+
+            >.received {
+                width: 500px;
+                display: flex;
+                align-self: flex-start;
+                padding: 0.5rem;
+                border-radius: 10px;
+                background-color: var(--boolzapp-lighter);
+
+                & i {
+                    font-size: 15px;
+                    color: var(--boolzapp-user-icon);
+                    padding: 0;
+                }
+
+                & .right-chat {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    position: relative;
+
+                    &>span {
+                        font-size: 10px;
+                        color: var(--boolzapp-user-icon);
+                    }
+                }
+            }
+
+        }
+
+    }
+
+}
+
+/* #endregion Common */
+
+/* #region Main */
+
+.avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+
+.icons {
+    color: var(--boolzapp-user-icon);
+    font-size: 20px;
+
+    &>i {
+        padding: 0.5rem;
+    }
+}
+
+.user-profile {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: var(--boolzapp-light);
+}
+
+.notifications {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    background-color: var(--boolzapp-notify);
+
+    &>.notifications-icon {
+        &>i {
+            font-size: 20px;
+            color: var(--boolzapp-notify);
+            background: var(--boolzapp-lighter);
+            border-radius: 50%;
+            padding: 1rem;
+        }
+    }
+
+    &>.notification-text {
+        display: flex;
+        flex-direction: column;
+        padding-left: 1rem;
+
+        &>strong {
+            font-size: 16px;
+        }
+    }
+}
+
+.search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--boolzapp-light);
+
+    & i {
+        font-size: 15px;
+        padding: 1rem;
+        color: var(--boolzapp-user-icon);
+        background-color: var(--boolzapp-lighter);
+    }
+
+    & input {
+        width: 250px;
+        padding: 1rem;
+        border: none;
+    }
+}
+
+.contacts-list {
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    background-color: var(--boolzapp-lighter);
+
+    &>.contacts {
+        display: flex;
+        border: 0.1px solid var(--boolzapp-light);
+        background-color: var(--boolzapp-lighter);
+
+        &>.user-icon-column {
+            padding: 1rem;
+        }
+
+        &>.user-name {
+            flex: auto;
+            font-size: 20px;
+            align-self: center;
+
+            &>.msg-preview {
+                font-size: 13px;
+                color: var(--boolzapp-user-icon);
+            }
+        }
+
+        &>.msg-time {
+            padding-top: 1rem;
+            padding-right: 0.5rem;
+            color: var(--boolzapp-user-icon);
+        }
+    }
+}
+
+.prompt {
+    justify-content: space-between;
+    color: var(--boolzapp-utility-icon);
+    background-color: var(--boolzapp-light);
+
+    & input {
+        width: 500px;
+        border: none;
+        padding: 1rem;
+        border-radius: 10px;
+        outline: none;
+    }
+
+    & i {
+        font-size: 25px;
+        padding: 1.5rem;
+    }
+}
+
+/* #endregion Main */
+
+/* #region Media */
+
+@media screen and (max-width: 991px) {
+
+    #appMain {
+        margin: 0;
+        height: 100vh;
+        box-shadow: none;
+
+        .left {
+            height: 100%;
+
+            &>div:not(:nth-child(4)) {
+                height: var(--bz-blocks-height);
+            }
+
+            &> :nth-child(4) {
+                height: calc(100% - 70px);
+                overflow-y: auto;
+            }
+
+            .notifications,
+            .search,
+            .user-name,
+            .msg-time,
+            .icons {
+                display: none;
+            }
+
+        }
+
+    }
+
+}
+
+/* medium */
+
+@media screen and (max-width: 540px) {
+
+    #appMain {
+        margin: 0;
+        height: 100vh;
+        box-shadow: none;
+
+        .left,
+        .utility-icons,
+        .emotes,
+        .vocal {
+            display: none;
+        }
+
+        .prompt {
+            justify-content: center;
+        }
+
+    }
+}
+
+/* small */
+
+/* #endregion Media */
