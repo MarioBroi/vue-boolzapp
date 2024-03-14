@@ -4,10 +4,12 @@ const { createApp } = Vue
 createApp({
     data() {
         return {
+            message: 'poba',
             contacts: [
                 {
                     name: 'Michele',
-                    avatar: './img/avatar_1.png',
+                    avatar: './assets/img/avatar_1.jpg',
+                    lastMsg: 'Ultimo messagio inviato',
                     visible: true,
                     messages: [
                         {
@@ -29,7 +31,8 @@ createApp({
                 },
                 {
                     name: 'Fabio',
-                    avatar: './img/avatar_2.png',
+                    avatar: './assets/img/avatar_2.jpg',
+                    lastMsg: 'Ultimo messagio inviato',
                     visible: true,
                     messages: [
                         {
@@ -51,7 +54,8 @@ createApp({
                 },
                 {
                     name: 'Samuele',
-                    avatar: './img/avatar_3.png',
+                    avatar: './assets/img/avatar_3.jpg',
+                    lastMsg: 'Ultimo messagio inviato',
                     visible: true,
                     messages: [
                         {
@@ -73,7 +77,8 @@ createApp({
                 },
                 {
                     name: 'Alessandro B.',
-                    avatar: './img/avatar_4.png',
+                    avatar: './assets/img/avatar_4.jpg',
+                    lastMsg: 'Ultimo messagio inviato',
                     visible: true,
                     messages: [
                         {
@@ -90,7 +95,8 @@ createApp({
                 },
                 {
                     name: 'Alessandro L.',
-                    avatar: './img/avatar_5.png',
+                    avatar: './assets/img/avatar_5.jpg',
+                    lastMsg: 'Ultimo messagio inviato',
                     visible: true,
                     messages: [
                         {
@@ -107,7 +113,8 @@ createApp({
                 },
                 {
                     name: 'Claudia',
-                    avatar: './img/avatar_6.png',
+                    avatar: './assets/img/avatar_6.jpg',
+                    lastMsg: 'Ultimo messagio inviato',
                     visible: true,
                     messages: [
                         {
@@ -129,7 +136,8 @@ createApp({
                 },
                 {
                     name: 'Federico',
-                    avatar: './img/avatar_7.png',
+                    avatar: './assets/img/avatar_7.jpg',
+                    lastMsg: 'Ultimo messagio inviato',
                     visible: true,
                     messages: [
                         {
@@ -146,7 +154,8 @@ createApp({
                 },
                 {
                     name: 'Davide',
-                    avatar: './img/avatar_8.png',
+                    avatar: './assets/img/avatar_8.jpg',
+                    lastMsg: 'Ultimo messagio inviato',
                     visible: true,
                     messages: [
                         {

@@ -62,138 +62,22 @@
             <div class="contacts-list">
 
                 <div class="contacts">
-                    <div class="user-icon-column">
-                        <img src="./assets/img/avatar_1.jpg" alt="" class="avatar">
+                    <div class="user-icon-column" v-for="(contact,index) in contacts">
+                        <img :src="contact.avatar" :alt="contact.name" class="avatar">
+                        <div class="user-name">
+                            <strong>{{contact.name}}</strong>
+                        </div>
+                        <!-- /.user-name -->
+                        <div class="msg-preview">
+                            {{contact.lastMsg}}
+                        </div>
+                        <!-- /.msg-preview -->
+                        <div class="msg-time">
+                            12:00
+                        </div>
+                        <!-- /.msg-time -->
                     </div>
                     <!-- /.user-icon-column -->
-                    <div class="user-name">
-                        <strong>Michele</strong>
-                        <div class="msg-preview">Lorem ipsum dolor sit amet.</div>
-                    </div>
-                    <!-- /.user-name -->
-                    <div class="msg-time">
-                        16:15
-                    </div>
-                    <!-- /.msg-time -->
-                </div>
-                <!-- /.contacts -->
-
-                <div class="contacts">
-                    <div class="user-icon-column">
-                        <img src="./assets/img/avatar_2.jpg" alt="" class="avatar">
-                    </div>
-                    <!-- /.user-icon-column -->
-                    <div class="user-name">
-                        <strong>Fabio</strong>
-                        <div class="msg-preview">Lorem ipsum dolor sit amet.</div>
-                    </div>
-                    <!-- /.user-name -->
-                    <div class="msg-time">
-                        16:05
-                    </div>
-                    <!-- /.msg-time -->
-                </div>
-                <!-- /.contacts -->
-
-                <div class="contacts">
-                    <div class="user-icon-column">
-                        <img src="./assets/img/avatar_3.jpg" alt="" class="avatar">
-                    </div>
-                    <!-- /.user-icon-column -->
-                    <div class="user-name">
-                        <strong>Samuele</strong>
-                        <div class="msg-preview">Lorem ipsum dolor sit amet.</div>
-                    </div>
-                    <!-- /.user-name -->
-                    <div class="msg-time">
-                        16:03
-                    </div>
-                    <!-- /.msg-time -->
-                </div>
-                <!-- /.contacts -->
-
-                <div class="contacts">
-                    <div class="user-icon-column">
-                        <img src="./assets/img/avatar_4.jpg" alt="" class="avatar">
-                    </div>
-                    <!-- /.user-icon-column -->
-                    <div class="user-name">
-                        <strong>Alessandro B.</strong>
-                        <div class="msg-preview">Lorem ipsum dolor sit amet.</div>
-                    </div>
-                    <!-- /.user-name -->
-                    <div class="msg-time">
-                        15:50
-                    </div>
-                    <!-- /.msg-time -->
-                </div>
-                <!-- /.contacts -->
-
-                <div class="contacts">
-                    <div class="user-icon-column">
-                        <img src="./assets/img/avatar_5.jpg" alt="" class="avatar">
-                    </div>
-                    <!-- /.user-icon-column -->
-                    <div class="user-name">
-                        <strong>Alessandro L.</strong>
-                        <div class="msg-preview">Lorem ipsum dolor sit amet.</div>
-                    </div>
-                    <!-- /.user-name -->
-                    <div class="msg-time">
-                        15:45
-                    </div>
-                    <!-- /.msg-time -->
-                </div>
-                <!-- /.contacts -->
-
-                <div class="contacts contacts-md">
-                    <div class="user-icon-column">
-                        <img src="./assets/img/avatar_6.jpg" alt="" class="avatar">
-                    </div>
-                    <!-- /.user-icon-column -->
-                    <div class="user-name">
-                        <strong>Gessico calcetto</strong>
-                        <div class="msg-preview">Lorem ipsum dolor sit amet.</div>
-                    </div>
-                    <!-- /.user-name -->
-                    <div class="msg-time">
-                        15:35
-                    </div>
-                    <!-- /.msg-time -->
-                </div>
-                <!-- /.contacts -->
-
-                <div class="contacts contacts-md">
-                    <div class="user-icon-column">
-                        <img src="./assets/img/avatar_7.jpg" alt="" class="avatar">
-                    </div>
-                    <!-- /.user-icon-column -->
-                    <div class="user-name">
-                        <strong>Ignazio</strong>
-                        <div class="msg-preview">Lorem ipsum dolor sit amet.</div>
-                    </div>
-                    <!-- /.user-name -->
-                    <div class="msg-time">
-                        15:21
-                    </div>
-                    <!-- /.msg-time -->
-                </div>
-                <!-- /.contacts -->
-
-                <div class="contacts contacts-md">
-                    <div class="user-icon-column">
-                        <img src="./assets/img/avatar_8.jpg" alt="" class="avatar">
-                    </div>
-                    <!-- /.user-icon-column -->
-                    <div class="user-name">
-                        <strong>Basilio</strong>
-                        <div class="msg-preview">Lorem ipsum dolor sit amet.</div>
-                    </div>
-                    <!-- /.user-name -->
-                    <div class="msg-time">
-                        03:35
-                    </div>
-                    <!-- /.msg-time -->
                 </div>
                 <!-- /.contacts -->
 
@@ -252,12 +136,7 @@
                 <div class="received">
                     <div class="left-chat">
                         <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga sapiente cumque ipsam
-                            laboriosam
-                            quam iure consectetur nam, quos quasi dolores eius qui! Est minus error quaerat aperiam
-                            eos
-                            iure
-                            optio, ducimus aliquid, deleniti accusantium delectus aliquam!
+                            {{contacts.messages}}
                         </p>
                     </div>
                     <!-- /.left-chat -->
@@ -294,8 +173,8 @@
 
     </div>
     <!-- /#app-main -->
-    <script src="./assets/js/app.js"></script>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="./assets/js/app.js"></script>
 </body>
 
 </html>
