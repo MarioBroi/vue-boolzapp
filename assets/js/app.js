@@ -5,6 +5,7 @@ createApp({
     data() {
         return {
             message: 'poba',
+            clickedContact: 0,
             contacts: [
                 {
                     name: 'Michele',
@@ -179,6 +180,10 @@ createApp({
         }
     },
     methods: {
-
+        changeContact(index){
+            console.log('Sto cambiando contatto'); //verify if the click is working
+            this.clickedContact = index;
+            console.log(this.clickedContact); //index of the contact
+        }
     }
 }).mount('#appMain');
