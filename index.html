@@ -90,7 +90,7 @@
         </div>
         <!-- /.left -->
 
-        <div class="right">
+        <section class="right">
 
             <div class="contact-profile">
 
@@ -115,48 +115,14 @@
 
             <div class="chat">
 
-                <div class="sent">
-                    <div class="left-chat">
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga sapiente cumque ipsam
-                            laboriosam
-                            quam iure consectetur nam, quos quasi dolores eius qui! Est minus error quaerat aperiam
-                            eos
-                            iure
-                            optio, ducimus aliquid, deleniti accusantium delectus aliquam!
-                        </p>
-                    </div>
-                    <!-- /.left-chat -->
+                <div v-for="(msg, mIndex) in contacts[clickedContact].messages" :class="sent(msg.status)">
 
-                    <div class="right-chat">
-                        <i class="fa-solid fa-chevron-down"></i>
-                        <span>16:13</span>
-                    </div>
-                    <!-- /.right-chat -->
+                    <span>{{msg.message}}</span>
+                    <i class="fa-solid fa-chevron-down"></i>
+                    <span>16:13</span>
+                    <!-- DA SISTEMARE IN UN DIV E POSIZIONARE CORRETTAMENTE -->
+
                 </div>
-                <!-- /.sent -->
-
-                <div class="received">
-                    <div class="left-chat">
-
-                        <div v-for="(firstMessage, mIndex) in contacts[clickedContact].messages">
-                            <!-- sto ciclando il contatto cliccato e prendendo tutte le key dentro messages -->
-                            <span>{{firstMessage.message}}</span>
-                            <!-- sto stampando il risultato ciclato prendendo la key message -->
-                            <!-- come estraggo un messaggio da ogni array messages?  -->
-
-                        </div>
-                        <!-- TEST -->
-
-                    </div>
-                    <!-- /.left-chat -->
-                    <div class="right-chat">
-                        <i class="fa-solid fa-chevron-down"></i>
-                        <span>16:13</span>
-                    </div>
-                    <!-- /.right-chat -->
-                </div>
-                <!-- /.received -->
 
             </div>
             <!-- /.chat -->
@@ -178,7 +144,7 @@
                 <!-- /.vocal -->
             </div>
             <!-- /.prompt -->
-        </div>
+        </section>
         <!-- /.right -->
 
     </div>

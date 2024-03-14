@@ -180,10 +180,16 @@ createApp({
         }
     },
     methods: {
-        changeContact(index){
+        changeContact(index) {
             console.log('Sto cambiando contatto'); //verify if the click is working
             this.clickedContact = index;
             console.log(this.clickedContact); //index of the contact
+        },
+        sent(string) {
+            if (string == 'sent') {
+                return 'sent'
+            }
+            return 'received'
         }
     }
 }).mount('#appMain');
