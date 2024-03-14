@@ -1,6 +1,6 @@
 # Milestone 1
 - Replica della grafica con la possibilità di avere messaggi scritti dall’utente (verdi) e
-dall’interlocutore (bianco) assegnando due classi CSS diverse
+dall’interlocutore (bianco) assegnando due classi CSS diverse ✔
 - Visualizzazione dinamica della lista contatti: tramite la direttiva v-for, visualizzare
 nome e immagine di ogni contatto ✔
 
@@ -24,6 +24,3 @@ contatti il cui nome contiene le lettere inserite (es, Marco, Matteo Martina -> 
 - Cancella messaggio: cliccando sul messaggio appare un menu a tendina che
 permette di cancellare il messaggio selezionato
 - Visualizzazione ora e ultimo messaggio inviato/ricevuto nella lista dei contatti
-
-### ragionamenti
-- 

@@ -26,7 +26,7 @@
 
     <div id="appMain">
 
-        <div class="left">
+        <section class="left">
 
             <div class="user-profile">
                 <div class="avatar">
@@ -56,7 +56,8 @@
 
             <div class="search">
                 <i class="fa-solid fa-magnifying-glass"></i>
-                <input type="text" placeholder="Cerca o inizia una nuova chat" v-model="searchInput" @keyup="search()">
+                <input type="text" placeholder="Cerca o inizia una nuova chat" v-model="searchInput" @keyup="search()"
+                    class="textSearch">
             </div>
             <!-- /.search -->
 
@@ -65,19 +66,27 @@
                 <div class="contacts d-flex flex-column">
                     <div class="user-icon-column" v-for="(contact,index) in contacts" @click="changeContact(index)"
                         :class="contact.visible === false ? 'd-none' : 'd-flex'">
+
                         <img :src="contact.avatar" :alt="contact.name" class="avatar">
-                        <div class="user-name">
-                            <strong>{{contact.name}}</strong>
+
+                        <div class="name-preview">
+
+                            <div class="user-name">
+                                <strong>{{contact.name}}</strong>
+                            </div>
+                            <!-- /.user-name -->
+                            <div class="msg-preview">
+                                {{contact.lastMsg}}
+                            </div>
+                            <!-- /.msg-preview -->
+                            <div class="msg-time">
+                                12:00
+                            </div>
+                            <!-- /.msg-time -->
+
                         </div>
-                        <!-- /.user-name -->
-                        <div class="msg-preview">
-                            {{contact.lastMsg}}
-                        </div>
-                        <!-- /.msg-preview -->
-                        <div class="msg-time">
-                            12:00
-                        </div>
-                        <!-- /.msg-time -->
+                        <!-- /.time-preview -->
+
                     </div>
                     <!-- /.user-icon-column -->
                 </div>
@@ -86,7 +95,7 @@
             </div>
             <!-- /.contacts-list -->
 
-        </div>
+        </section>
         <!-- /.left -->
 
         <section class="right">
@@ -117,9 +126,13 @@
                 <div v-for="(msg, mIndex) in contacts[clickedContact].messages" :class="sent(msg.status)">
 
                     <span>{{msg.message}}</span>
-                    <i class="fa-solid fa-chevron-down"></i>
-                    <span>16:13</span>
-                    <!-- DA SISTEMARE IN UN DIV E POSIZIONARE CORRETTAMENTE -->
+                    <!-- / message -->
+
+                    <div class="hour-chevron">
+                        <i class="fa-solid fa-chevron-down"></i>
+                        <div>16:13</div>
+                    </div>
+                    <!-- /.hour-chevron -->
 
                 </div>
 
