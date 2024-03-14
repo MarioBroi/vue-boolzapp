@@ -199,6 +199,15 @@ createApp({
             });
             this.message = '';
             console.log('Sto printando il messaggio');
+            setTimeout(this.contactReply, 1000)
+        },
+        contactReply() {
+            this.contacts[this.clickedContact].messages.push({
+                date: 'now',
+                message: 'ok',
+                status: 'received'
+            })
         }
+
     }
 }).mount('#appMain');
