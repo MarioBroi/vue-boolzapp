@@ -138,9 +138,16 @@
 
                 <div class="received">
                     <div class="left-chat">
-                        <p>
-                            {{contacts.messages}}
-                        </p>
+
+                        <div v-for="(firstMessage, mIndex) in contacts[clickedContact].messages">
+                            <!-- sto ciclando il contatto cliccato e prendendo tutte le key dentro messages -->
+                            <span>{{firstMessage.message}}</span>
+                            <!-- sto stampando il risultato ciclato prendendo la key message -->
+                            <!-- come estraggo un messaggio da ogni array messages?  -->
+
+                        </div>
+                        <!-- TEST -->
+
                     </div>
                     <!-- /.left-chat -->
                     <div class="right-chat">
