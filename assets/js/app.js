@@ -190,6 +190,15 @@ createApp({
                 return 'sent'
             }
             return 'received'
+        },
+        sendMessage() {
+            this.contacts[this.clickedContact].messages.push({
+                date: 'now',
+                message: this.message,
+                status: 'sent'
+            });
+            this.message = '';
+            console.log('Sto printando il messaggio');
         }
     }
 }).mount('#appMain');

@@ -134,9 +134,7 @@
                 </div>
                 <!-- /.emotes -->
 
-                <form action="">
-                    <input type="text" placeholder="Scrivi un messaggio">
-                </form>
+                <input type="text" placeholder="Scrivi un messaggio" v-model="message" @keyup.enter="sendMessage()">
 
                 <div class="vocal">
                     <i class="fa-solid fa-microphone"></i>
