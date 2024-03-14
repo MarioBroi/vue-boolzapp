@@ -95,11 +95,11 @@
             <div class="contact-profile">
 
                 <div class="user-icon">
-                    <img src="./assets/img/avatar_1.jpg" alt="" class="avatar">
+                    <img :src="contacts[clickedContact].avatar" alt="" class="avatar">
                 </div>
                 <!-- /.user-icon -->
                 <div class="user-name">
-                    <strong>Michele</strong>
+                    <strong>{{contacts[clickedContact].name}}</strong>
                     <div class="msg-preview">Ultimo accesso oggi alle 16:26</div>
                 </div>
                 <!-- /.user-name -->
