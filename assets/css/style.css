@@ -75,11 +75,11 @@ body {
         >.prompt {
             display: flex;
             align-items: center;
-            height: 70px;
+            height: 92.5px;
         }
 
         >.chat {
-            height: calc(100% - 140px);
+            height: calc(100% - 185px);
             overflow-y: auto;
             display: flex;
             flex-direction: column;
@@ -94,10 +94,17 @@ body {
                 border-radius: 10px;
                 background-color: var(--boolzapp-sender-msg);
 
+                & .hour-chevron {
+                    display: flex;
+                    flex-direction: column;
+                    padding: 0 0 0 1rem;
+                }
+
                 & i {
                     font-size: 15px;
                     color: var(--boolzapp-user-icon);
                     margin: 0 0 0 10px;
+                    align-self: flex-end;
                 }
 
                 & .right-chat {
@@ -120,10 +127,17 @@ body {
                 border-radius: 10px;
                 background-color: var(--boolzapp-lighter);
 
+                & .hour-chevron {
+                    display: flex;
+                    flex-direction: column;
+                    padding: 0 0 0 1rem;
+                }
+
                 & i {
                     font-size: 15px;
                     color: var(--boolzapp-user-icon);
                     margin: 0 0 0 10px;
+                    align-self: flex-end;
                 }
 
                 & .right-chat {
@@ -153,6 +167,13 @@ body {
     width: 60px;
     height: 60px;
     border-radius: 50%;
+    display: flex;
+    align-items: center;
+
+    & .user-name {
+        padding: 0.5rem;
+        font-weight: bold;
+    }
 }
 
 .icons {

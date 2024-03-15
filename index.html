@@ -31,6 +31,9 @@
             <div class="user-profile">
                 <div class="avatar">
                     <img src="./assets/img/avatar_io.jpg" alt="" class="avatar">
+                    <div class="user-name">
+                        Sofia
+                    </div>
                 </div>
                 <div class="icons">
                     <i class="fa-solid fa-circle-notch"></i>
@@ -107,8 +110,10 @@
                 </div>
                 <!-- /.user-icon -->
                 <div class="user-name">
-                    <strong>{{contacts[clickedContact].name}}</strong>
-                    <div class="msg-preview">Ultimo accesso oggi alle 16:26</div>
+                    <strong>
+                        {{contacts[clickedContact].name}}
+                    </strong>
+                    <div class="msg-preview">Ultimo accesso oggi alle 12:00</div>
                 </div>
                 <!-- /.user-name -->
                 <div class="utility-icons">
@@ -130,7 +135,10 @@
 
                     <div class="hour-chevron">
                         <i class="fa-solid fa-chevron-down"></i>
-                        <div>16:13</div>
+                        <div>
+                            {{msg.date.slice(10, -3)}}
+                        </div>
+
                     </div>
                     <!-- /.hour-chevron -->
 
