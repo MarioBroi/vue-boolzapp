@@ -4,7 +4,6 @@ const { createApp } = Vue
 createApp({
     data() {
         return {
-            message: 'poba',
             clickedContact: 0,
             contacts: [
                 {

@@ -74,18 +74,24 @@
 
                         <div class="name-preview">
 
-                            <div class="user-name">
-                                <strong>{{contact.name}}</strong>
+                            <div class="contact-spec">
+
+                                <div class="user-name">
+                                    <strong>{{contact.name}}</strong>
+                                </div>
+                                <!-- /.user-name -->
+                                <div class="msg-time">
+                                    {{contact.messages.at(-1).date.slice(10,-3)}}
+                                </div>
+                                <!-- /.msg-time -->
+
                             </div>
-                            <!-- /.user-name -->
+                            <!-- /.contact-spec -->
+
                             <div class="msg-preview">
                                 {{contact.lastMsg}}
                             </div>
                             <!-- /.msg-preview -->
-                            <div class="msg-time">
-                                12:00
-                            </div>
-                            <!-- /.msg-time -->
 
                         </div>
                         <!-- /.time-preview -->

@@ -45,6 +45,11 @@ body {
             overflow-y: auto;
         }
 
+        & .contact-spec {
+            display: flex;
+            justify-content: space-between;
+        }
+
     }
 
     .right {
